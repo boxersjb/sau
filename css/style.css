@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+.img1 {
+    img {
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: auto;
+    }
+}
+
+.img2 {
+    text-align: center;
+
+    img {
+        border: 2px solid green;
+        border-radius: 20px;
+    }
+}
+
+.duo {
+    text-align: center;
+
+    button {
+        padding: 20px;
+    }
+}
