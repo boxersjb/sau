@@ -31,11 +31,17 @@
     <div class="duo">
         <button onclick="alertClick()">Click me!</button>
         <button>Don't Click</button>
+        <button>FFF</button>
     </div>
     <hr>
     Create boxers
     <br>
     Copyright ©️ 2025 Hogward legacy
+    <!-- <script>
+        function alertClick(){
+            alert('Test')
+        }
+    </script> -->
     <script src="js/script.js"></script>
 </body>
 
