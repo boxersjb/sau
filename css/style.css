@@ -1,6 +1,8 @@
-h1 {
-    text-align: center;
-    color: blue;
+.box1 {
+    h1 {
+        text-align: center;
+        color: blue;
+    }
 }
 
 .img1 {
@@ -27,4 +29,8 @@ h1 {
     button {
         padding: 20px;
     }
+}
+
+span {
+    font-weight: bold;
 }

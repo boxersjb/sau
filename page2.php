@@ -14,7 +14,9 @@
 
 
 <body>
-    <h1>SAU</h1>
+    <div class="box1">
+        <h1>SAU</h1>
+    </div>
     <h3>Welcome To SAU</h3>
     <div class="img1">
         <img src="img/img1.png" alt="Cat">
