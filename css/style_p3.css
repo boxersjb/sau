@@ -1,0 +1,48 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: underline;
+    color: blue;
+}
+
+.pa1 {
+    margin: 0px 100px;
+}
+
+.pa2 {
+    margin: 0px 150px;
+    color: blueviolet;
+}
+
+.box-img {
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 100px;
+        padding: 10px;
+        border-radius: 20px;
+        margin: 0px 10px;
+    }
+
+    #cat1 {
+        border: 2px solid red;
+    }
+
+    #cat2 {
+        border: 2px solid blue;
+    }
+
+    #cat3 {
+        border: 2px solid green;
+    }
+}
+
+.credit {
+    text-align: center;
+    padding: 50px 0px 100px 0px;
+}
