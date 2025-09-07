@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General sibling  */
+        .aa ~ p{
+            color: red;
+            border: 2px solid blue;
+            background-color: yellow;
+            padding-left: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="aa">
+        <p>111</p>
+        <p>222</p>
+        <span>Hello</span>
+        <div class="bb">
+            <p>333</p>
+            <div class="cc">
+                <p>444</p>
+                <span>Hi!!</span>
+            </div>
+        </div>
+        <p>555</p>
+    </div>
+    <p>6666</p>
+    <p>777</p>
+    <span>Hey!!</span>
+    <p>8888</p>
+</body>
+
+</html>
