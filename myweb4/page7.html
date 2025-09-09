@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      height: 600px;
+      border: 2px solid #f76707;
+      border-radius: 5px;
+      background-color: #fff4e6;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 4fr 2fr;
+      grid-template-rows: 100px auto 1fr auto 200px;
+      grid-template-areas:
+        "box1 box1 box1"
+        "box2 box3 box6"
+        "box2 box4 box6"
+        "box2 box5 box6"
+        "box7 box7 box7";
+    }
+
+    .container div {
+      border: 2px solid #ffa94d;
+      border-radius: 5px;
+      padding: 1em;
+      color: #ffffff;
+      font-weight: bold;
+      margin: 2.5px;
+    }
+
+    .box1 {
+      background-color: red;
+      grid-area: box1;
+    }
+
+    .box2 {
+      background-color: greenyellow;
+      grid-area: box2;
+    }
+
+    .box3 {
+      background-color: salmon;
+      grid-area: box3;
+    }
+
+    .box4 {
+      background-color: aqua;
+      grid-area: box4;
+    }
+
+    .box5 {
+      background-color: chocolate;
+      grid-area: box5;
+    }
+
+    .box6 {
+      background-color: blue;
+      grid-area: box6;
+    }
+
+    .box7 {
+      background-color: pink;
+      grid-area: box7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box1">One</div>
+    <div class="box2">Two</div>
+    <div class="box3">Three</div>
+    <div class="box4"><img src="img/img4.png" alt="img"></div>
+    <div class="box5">Five</div>
+    <div class="box6">Six</div>
+    <div class="box7">Seven</div>
+  </div>
+</body>
+
+</html>
