@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .item {
+            padding: 5px;
+        }
+
+        @media screen and (max-width:768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (min-width: 769) and (max-width: 1279) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            .container {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1" style="background: lightcoral;">
+            item 1
+        </div>
+        <div class="item item2" style="background: lightblue;">
+            item 2
+        </div>
+        <div class="item item3" style="background: lightgreen;">
+            item 3
+        </div>
+        <div class="item item4" style="background: lightyellow;">
+            item 4
+        </div>
+        <div class="item item5" style="background: lightpink;">
+            item 5
+        </div>
+    </div>
+</body>
+
+</html>

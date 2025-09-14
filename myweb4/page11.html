@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            border: 2px solid red;
+            border-radius: 0.75rem;
+            padding: 1rem;
+        }
+        .container{
+            display: grid;
+            gap: 1rem;
+        }
+        @media screen and (max-width:768px) {
+            .container{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                "card1"
+                "card2"
+                "card3"
+                "card4";
+            }
+        }
+
+        @media screen and (min-width: 769px) and (max-width: 1279px) {
+            .container{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(2, auto);
+                grid-template-areas: 
+                "card1 card2"
+                "card3 card4";
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            .container{
+                display: grid;
+                grid-template-columns: repeat(4, auto);
+                grid-template-rows: auto;
+                grid-template-areas: 
+                "card1 card2 card3 card4";
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="grid-area: card1">
+            <img src="https://picsum.photos/200" alt="Image 1">
+            <h3>Card Title 1</h3>
+            <p>Sub-title 1</p>
+        </div>
+        <div class="card" style="grid-area: card2">
+            <img src="https://picsum.photos/200" alt="Image 2">
+            <h3>Card Title 2</h3>
+            <p>Sub-title 2</p>
+        </div>
+        <div class="card" style="grid-area: card3">
+            <img src="https://picsum.photos/200" alt="Image 3">
+            <h3>Card Title 3</h3>
+            <p>Sub-title 3</p>
+        </div>
+        <div class="card" style="grid-area: card4">
+            <img src="https://picsum.photos/200" alt="Image 4">
+            <h3>Card Title 4</h3>
+            <p>Sub-title 4</p>
+        </div>
+    </div>
+</body>
+</html>
