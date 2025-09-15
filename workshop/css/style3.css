@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000c58;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+h1{
+    font-size: 101px;
+    font-family: 'Bebas Neue';
+    color: #ffffff;
+    margin: 0;
+    /* line-height: 90%; */
+}
+
+h2{
+    font-size: 32px;
+    font-family: 'Prompt';
+    color: #ffffff;
+    margin: 0;
+}
+
+p{
+    font-size: 18px;
+    font-family: 'Prompt';
+    color: #ffffff;
+    line-height: 150%;
+    margin: 10px 0px 0px 0px;
+}
+
+hr{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #484848;
+    width: 95%;
+}
+
+label{
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Manrope';
+}
+
+nav{
+    height: 96px;
+    background-color: #060135;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5%;
+}
+
+.logo{
+    font-size: 32px;
+    font-family: 'Bebas Neue';
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    font-family: 'Inter';
+}
+
+.contact, .cap, .exp, .connect {
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 65px 120px;
+}
+
+.contact-so{
+    display: flex;
+    color: #7a99e9;
+    padding-top: 24px;
+}
+
+.contact-so .ico-so{
+    background-color: #222222;
+    border-radius: 40px;
+    font-size: 30px;
+    padding: 10px;
+    margin: 0px 10px;
+}
+.contact-so .btn-so {
+    background-color: #7a99e9;
+    border: 1px solid #7a99e9;
+    border-radius: 100px;
+    font-size: 16px;
+    font-family: 'Prompt';
+    color: #222222;
+    font-weight: bold;
+}
+.btn-so i {
+    margin-left: 8px;
+}
+.contact-img{
+    padding: 0px 60px;
+}
+.contact-img img {
+    width: 535px;
+    border-radius: 27px;
+}
+
+.about{
+    height: 689;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "about-me about-content"
+    "img-work img-work";
+    padding: 65px 120px;
+}
+
+.about-me { grid-area: about-me; }
+.about-content { grid-area: about-content; }
+.img-work { grid-area: img-work; }
+
+.img-work img{
+    padding-top: 20px;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+.cap-lang{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    padding: 24px 0px;
+}
+.lang {
+    color: #ffffff;
+    border: 1px solid #484848;
+    border-radius: 100px;
+    padding: 10px 16px;
+    text-align: center;
+    font-family: 'Manrope';
+    font-size: 16px;
+}
+
+.exp-sub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.connect-so{
+    display: flex;
+    font-size: 40px;
+    color: #7a99e9;
+}
+.connect-so .ico-so{
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.connect-form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-box input, textarea{
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background-color: #060135;
+    border: 1px solid #060135;
+}
+
+.input-box textarea{
+    height: 100px;
+}
+
+footer{
+    text-align: center;
+    color: #ffffff;
+    padding: 30px;
+    font-family: 'Prompt';
+}
