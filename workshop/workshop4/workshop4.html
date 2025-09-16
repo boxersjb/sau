@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -22,23 +28,246 @@
         </nav>
         <div class="container">
             <div class="sub-text">
-                <h2>Delicious Cafe</h2>
+                <h4>Delicious Cafe</h4>
             </div>
             <div class="main-text">
-                <p>Sweet Treats,<br>Perfect Eats</p>
+                <h1>Sweet Treats,<br>Perfect Eats</h1>
             </div>
             <div class="btn-more">
-                <button>Shop Now</button>
-                <h2>Learn More</h2>
+                <button class="btn btn-shop">Shop Now</button>
+                <h4>Learn More</h4>
             </div>
         </div>
     </header>
     <section class="top-products">
-        <div class="pd-frame">
-            <img src="img/pd1.png" alt="">
-            <p>40 Baht</p>
-            <i>i</i>
+        <div class="pd-header">
+            <h2>Top Products</h2>
+        </div>
+
+        <div class="pd-list">
+            <!-- Product 1  -->
+            <div class="pd-frame" id="pd1">
+                <div class="pd-img">
+                    <img src="img/pd1.png" alt="">
+                </div>
+                <div class="pd-price">
+                    <h4>40 Baht</h4>
+                    <i class="fa-solid fa-info"></i>
+                </div>
+                <div class="pd-add">
+                    <h4>Whole Grain Bread</h4>
+                    <button class="btn btn-add">Add</button>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="pd-frame" id="pd2">
+                <div class="pd-img">
+                    <img src="img/pd2.png" alt="">
+                </div>
+                <div class="pd-price">
+                    <h4>40 Baht</h4>
+                    <i class="fa-solid fa-info"></i>
+                </div>
+                <div class="pd-add">
+                    <h4>Whole Grain Bread</h4>
+                    <button class="btn btn-add">Add</button>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="pd-frame" id="pd3">
+                <div class="pd-img">
+                    <img src="img/pd3.png" alt="">
+                </div>
+                <div class="pd-price">
+                    <h4>40 Baht</h4>
+                    <i class="fa-solid fa-info"></i>
+                </div>
+                <div class="pd-add">
+                    <h4>Whole Grain Bread</h4>
+                    <button class="btn btn-add">Add</button>
+                </div>
+            </div>
+            <div class="pd-frame" id="pd4">
+                <div class="pd-img">
+                    <img src="img/pd4.png" alt="">
+                </div>
+                <div class="pd-price">
+                    <h4>40 Baht</h4>
+                    <i class="fa-solid fa-info"></i>
+                </div>
+                <div class="pd-add">
+                    <h4>Whole Grain Bread</h4>
+                    <button class="btn btn-add">Add</button>
+                </div>
+            </div>
+            <div class="pd-frame" id="pd5">
+                <div class="pd-img">
+                    <img src="img/pd5.png" alt="">
+                </div>
+                <div class="pd-price">
+                    <h4>40 Baht</h4>
+                    <i class="fa-solid fa-info"></i>
+                </div>
+                <div class="pd-add">
+                    <h4>Whole Grain Bread</h4>
+                    <button class="btn btn-add">Add</button>
+                </div>
+            </div>
+            <!-- Producect 6 -->
+            <div class="pd-frame" id="pd6">
+                <div class="pd-img">
+                    <img src="img/pd6.png" alt="">
+                </div>
+                <div class="pd-price">
+                    <h4>40 Baht</h4>
+                    <i class="fa-solid fa-info"></i>
+                </div>
+                <div class="pd-add">
+                    <h4>Whole Grain Bread</h4>
+                    <button class="btn btn-add">Add</button>
+                </div>
+            </div>
         </div>
     </section>
+
+    <section class="sale bg-no-repeat">
+        <div class="sale-container">
+            <div class="sale-header">
+                <h3>20% Off Your<br>First Order</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores.</p>
+            <button class="btn btn-learn">Learn More</button>
+        </div>
+    </section>
+
+    <section class="exp">
+        <div class="exp-header">
+            <h2>Explore More</h2>
+        </div>
+        <div class="exp-menu">
+            <div class="exp-list">Cake</div>
+            <div class="exp-list">Muffins</div>
+            <div class="exp-list">Croissant</div>
+            <div class="exp-list">Bread</div>
+            <div class="exp-list">Tart</div>
+            <div class="exp-list">Favorite</div>
+        </div>
+        <hr>
+        <div class="exp-img">
+            <div class="exp-img-list"><img src="img/exp1.png" alt="" id="exp1"></div>
+            <div class="exp-img-list"><img src="img/exp2.png" alt="" id="exp2"></div>
+            <div class="exp-img-list"><img src="img/exp3.png" alt="" id="exp3"></div>
+            <div class="exp-img-list"><img src="img/exp4.png" alt="" id="exp4"></div>
+            <div class="exp-img-list"><img src="img/exp5.png" alt="" id="exp5"></div>
+            <div class="exp-img-list"><img src="img/exp6.png" alt="" id="exp6"></div>
+        </div>
+    </section>
+
+    <section class="about bg-no-repeat">
+        <div class="about-container">
+            <div class="about-header">
+                <h3>About us</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias vitae natus officiis eius modi sint,
+                    possimus quaerat voluptatum placeat voluptate?</p>
+                <button class="btn btn-learn">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature">
+        <div class="feature-header">
+            <h2>Featured Treats</h2>
+        </div>
+
+        <div class="feature-container">
+            <div class="feature-img">
+                <div class="feature-img-list">
+                    <img src="img/fat1.png" alt="">
+                </div>
+                <div class="feature-price">
+                    <h5>Puff Pastry</h5>
+                    <h5>8 Baht</h5>
+                </div>
+            </div>
+            <div class="feature-img">
+                <div class="feature-img-list">
+                    <img src="img/fat2.png" alt="">
+                </div>
+                <div class="feature-price">
+                    <h5>Doughnuts</h5>
+                    <h5>8 Baht</h5>
+                </div>
+            </div>
+            <div class="feature-img">
+                <div class="feature-img-list">
+                    <img src="img/fat3.png" alt="">
+                </div>
+                <div class="feature-price">
+                    <h5>Brownies</h5>
+                    <h5>8 Baht</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-header">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="sub-text">
+                <p>Follow us</p>
+                <div class="footer-so">i</div>
+                <div class="footer-so">i</div>
+                <div class="footer-so">i</div>
+                <div class="footer-so">i</div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-about">
+            <div class="about-list">
+                <ul>
+                    <h1>About us</h1>
+                    <ul>(02) 807-4500</ul>
+                    <ul>info@sau.ac.th</ul>
+                    <ul>19/1 Phetkasem Road</ul>
+                    <ul>Nongkham Bangkok</ul>
+                    <ul>10160</ul>
+                </ul>
+                <ul>
+                    <h1>Explore</h1>
+                    <li>Home</li>
+                    <li>Blog</li>
+                    <li>Contact us</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+            <div class="recent-news">
+                <div class="main-text">
+                    <h1>Recent News</h1>
+                </div>
+                <div class="recent-menu">
+                    <div class="recent-img">
+                        <img src="img/foot-re1.png" alt="">
+                    </div>
+                    <div class="sub-text">
+                        <p>June 14,2025</p>
+                        <h2>Puff pastry bliss.</h2>
+                    </div>
+                    <div class="recent-img">
+                        <img src="img/foot-re2.png" alt="">
+                    </div>
+                    <div class="sub-text">
+                        <p>June 14,2025</p>
+                        <h2>Puff pastry bliss.</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-cradit">
+                <span>© 2025 Bake House. All rights reserved</span>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
