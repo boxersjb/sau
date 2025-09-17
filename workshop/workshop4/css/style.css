@@ -58,8 +58,9 @@ ul {
 }
 
 hr{
-    width: 90%;
-    border: 1px solid #737373;
+    width: 95%;
+    border-top: 1px solid #737373;
+    text-align: center;
 }
 
 .btn {
@@ -83,6 +84,19 @@ nav {
     margin-bottom: 10rem;
 }
 
+nav a {
+    color: #ffffff;
+}
+
+nav a:hover{
+    color: #e9bc8c;
+}
+
+nav a.active{
+    color: #e9bc8c;
+    font-weight: bold;
+}
+
 .logo img {
     width: 100%;
     height: auto;
@@ -93,7 +107,6 @@ nav {
 }
 
 .menu ul li {
-    color: #ffffff;
     margin-left: 20px;
 }
 
@@ -237,7 +250,7 @@ nav {
 }
 
 .exp-list {
-    margin-left: 30px;
+    margin: 0px 16px;
 }
 
 
@@ -258,6 +271,18 @@ nav {
     justify-content: center;
     height: 300px;
 }
+
+#fat1 {
+    object-position: calc(90%) center;
+} 
+
+#fat2 {
+    object-position: left center;
+} 
+
+#fat3 {
+    object-position: calc(82%) center;
+} 
 
 .exp-img-list img,
 .feature-img-list img {
