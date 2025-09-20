@@ -12,9 +12,13 @@ h1{
     font-size: 40px;
     font-family: 'Lora';
 }
+h2{
+    font-size: 20px;
+    font-family: 'Lora';
+} 
 
 p{
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Inter';
 }
 
@@ -23,8 +27,18 @@ ul {
 }
 a {
     text-decoration: none;
+    color: #ffffff;
+    font-family: 'Inter';
+    font-size: 20px;
 }
 
+.btn{
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 100px;
+    border: 1px solid #ffffff;
+    font-family: 'Inter';
+}
 .grid-tem{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -37,7 +51,10 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0px 50px;
-    font-family: 'Inter';
+}
+
+.container{
+    padding: 50px;
 }
 
 .menu-grp{
@@ -57,11 +74,16 @@ nav{
     align-content: center;
 } */
 
-
+.con-home{
+    justify-items: center;
+}
 .intro-img{
     display: block;
+    align-content: center;
 }
-
+.intro-so i {
+    font-size: 50px;
+}
 
 .intro-img img{
     display: block;
@@ -90,5 +112,61 @@ nav{
     margin: 0px 20px;
 }
 
+.about-footer, .about-sub{
+    text-align: center;
+}
+
+.btn-download{
+    padding: 20px;
+    font-size: 20px;
+}
 
 
+.port-sub{
+    display: block;
+    margin: 0px 20px;
+}
+
+
+.port-img img{
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.port-grp-btn{
+    align-content: center;
+    padding: 20px 0px;
+}
+.port-grp-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 50px;
+    font-family: 'Inter';
+}
+
+.btn-view{
+    padding: 5px 20px;
+    font-size: 20px;
+}
+
+.port-sub-text, .port-grp-btn{
+    text-align: center;
+}
+
+.contact-header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-content{
+    padding-bottom: 80px;
+}
+
+.contact-grp{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
