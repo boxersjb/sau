@@ -1,18 +1,27 @@
-import './App.css'
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './views/Home'
+import About from './views/About'
+import Contact from './views/Contact'
+import Account from './views/Account'
+import Register from './views/Register'
+import Marketing from './views/Marketing'
+import Error404 from './views/Error404'
 
 function App() {
-  const style_test = {
-    color: "blue",
-    textAlign: "center"
-  }
   return (
     <>
-      <h1 style={{color:"red", textAlign:"center"}}>Hiiiiiii</h1>
-      <h2 style={{style_test}}>Hello Chanachai Pansarakam</h2>
-      <hr />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, obcaecati.</p>
-      <hr />
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, neque!</p>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/dep/account" element={<Account />} />
+          <Route path="/dep/marketing" element={<Marketing />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
