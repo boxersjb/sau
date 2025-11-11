@@ -1,0 +1,87 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import './Bmr.css'
+
+function Car() {
+  return (
+    <>
+      <div className="container">
+        <div className="mainContent">
+          <div className="boxHeader">
+            <h1>Car Installment Calculator</h1>
+            <p>คำนวณ Car Installment</p>
+          </div>
+          <div className="boxImg">
+            <img src="./car.png" alt="" />
+          </div>
+
+          <div className="boxForm">
+            <div className="lblSub">
+              <label htmlFor="">ชื่อผู้คำนวณ</label>
+            </div>
+            <input className="ipText" type="text" />
+          </div>
+
+          <div className="boxForm">
+            <div className="lblSub">
+              <label htmlFor="">ราคารถ (บาท)</label>
+            </div>
+            <input className="ipText" type="text" />
+          </div>
+
+          <div className="boxForm">
+            <div className="lblSub">
+              <label htmlFor="">ดอกเบี้ยต่อปี (%)</label>
+            </div>
+            <input className="ipText" type="text" />
+          </div>
+
+          <div className="boxForm">
+            <div className="lblSub">
+              <label htmlFor="">เงินดาวน์ (%)</label>
+            </div>
+            <div className="grpRadio">
+              <input type="radio" name="per" id="per" />
+              <label htmlFor="20">15%</label>
+              <input type="radio" name="per" id="per" />
+              <label htmlFor="25">20%</label>
+              <input type="radio" name="per" id="per" />
+              <label htmlFor="30">25%</label>
+              <input type="radio" name="per" id="per" />
+              <label htmlFor="30">30%</label>
+              <input type="radio" name="per" id="per" />
+              <label htmlFor="30">35%</label>
+            </div>
+          </div>
+          <div className="boxForm">
+            <div className="lblSub">
+              <label htmlFor="">ระยะเวลาผ่อนชำระ (ปี)</label>
+            </div>
+            <select name="dateTime" id="dateTime" className='ipText '>
+              <option value="12">12 เดือน</option>
+              <option value="24">24 เดือน</option>
+              <option value="36">36 เดือน</option>
+              <option value="48">48 เดือน</option>
+              <option value="60">60 เดือน</option>
+            </select>
+          </div>
+          <div className="grpBtn">
+            <div className="btnDuo">
+              <button className="btn btnSubmit">คำนวณ</button>
+              <button className="btn btnReset">ล้างข้อมูล</button>
+            </div>
+            <div className="lblCalc">
+              <label htmlFor="">ผ่อนชำระเดือนละ: </label>
+              <label className="result" htmlFor="">0.00</label>
+            </div>
+
+            <Link to="/"><button className="btn btnHome">กลับหน้าหลัก</button></Link>
+          </div>
+
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default Car

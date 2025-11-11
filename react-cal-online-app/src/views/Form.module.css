@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  0px;
+    height: 100vh;
+    
+}
+
+.mainContent{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.boxHeader{
+    text-align: center;
+}
+
+.boxImg{
+    display: block;
+}
+
+.boxImg img{
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.boxForm label{
+    font-weight: bold;
+}
+
+.ipText{
+    width: calc(100% - 20px);
+    margin: 5px 0px 15px 0px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #5f5f5f;
+    padding: 10px;
+}
+
+.btn{
+    width: 100%;
+    margin-top: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: "Inter",'thasadith';
+    font-weight: bold;
+}
+
+.btnSubmit{
+    background-color: #155dfc;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btnReset, .btnHome{
+    background-color: #e5e7eb;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.lblCalc{
+    padding: 10px 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.result{
+    color: #155dfc;
+}
+
+.btnDuo{
+    display: flex;
+    gap: 10px;
+}
+
+.btnDuo .btn{
+    width: 50%;
+    margin-top: 5px
+}
+
+.btnResetBMR{
+    color: #ffffff;
+    background-color: #fb2c36;
+    border: none;
+}
+
+.grpRadio{
+    gap: 10px;
+    margin: 15px 0px;
+}
+
+

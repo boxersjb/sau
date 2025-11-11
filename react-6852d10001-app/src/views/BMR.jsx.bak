@@ -1,0 +1,68 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import './Bmr.css'
+
+function BMR() {
+  return (
+    <>
+      <div className="container">
+        <div className="mainContent">
+          <div className="boxHeader">
+            <h1>BMR Calculator</h1>
+            <p>คำนวณ BMR</p>
+          </div>
+
+          <div className="boxImg">
+            <img src="./bmr.png" alt="" />
+          </div>
+
+          <div className="boxForm">
+            <div className="lblSub">
+              <label htmlFor="">ป้อนน้ำหนัก (กิโลกรัม)</label>
+            </div>
+            <input className="ipText" type="text" />
+          </div>
+          <div className="boxForm">
+            <div className="lblSub">
+              <label htmlFor="">ป้อนส่วนสูง (เซนติเมตร)</label>
+            </div>
+            <input className="ipText" type="text" />
+          </div>
+          <div className="boxForm">
+            <div className="lblSub">
+              <label htmlFor="">ป้อนอายุ (ปี)</label>
+            </div>
+            <input className="ipText" type="text" />
+          </div>
+          <div className="boxForm">
+            <div className="lblSub">
+              <label htmlFor="">เลือกเพศ</label>
+            </div>
+            <div className="grpRadio">
+              <input type="radio" name="sex" id="sex" />
+              <label htmlFor="male">ชาย</label>
+              <br />
+              <input type="radio" name="sex" id="sex" />
+              <label htmlFor="female">หญิง</label>
+            </div>
+          </div>
+          <div className="grpBtn">
+            <div className="btnDuo">
+              <button className="btn btnSubmit">คำนวณ BMR</button>
+              <button className="btn btnResetBMR">รีเซ็ท BMR</button>
+            </div>
+
+            <div className="lblCalc">
+              <label htmlFor="">ค่า BMR ที่คำนวณได้: </label>
+              <label className="result" htmlFor="">0.00</label>
+            </div>
+
+            <Link to="/"><button className="btn btnHome">กลับหน้าหลัก</button></Link>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default BMR
