@@ -9,28 +9,21 @@ function ShowAllTask() {
 
     const [tasks, setTasks] = useState([])
 
-    //จะทำงานตอนที่เพจถูกเปิดขึ้นมา (rendered)
     useEffect(() => {
-        //ดึงข้อมูลงานทั้งหมดจาก Supabase
         try {
-            //สร้างฟังก์ชันสำหรับดึงข้อมูล
             const fetchTasks = async () => {
-                //ดึงข้อมูลจาก supabase (Postgres Database)
                 const { data, error } = await supabase
-                    .from('TB_TASK')          //ระบุชื่อตาราง
-                    .select("*")              //ระบุว่าจะดึงข้อมูลคอลัมน์อะไรบ้าง
-                    .order('task_update_at', { ascending: false }) //เรียงลำดับข้อมูลจากใหม่ไปเก่า
-                //ตรวจสอบว่ามี error หรือไม่
+                    .from('TB_TASK')
+                    .select("*")
+                    .order('task_update_at', { ascending: false })
                 if (error) {
                     alert("เกิดข้อผิดพลาดในการดึงข้อมูลงาน กรุณาลองใหม่อีกครั้ง!!!")
                     throw error
                 } else {
-                    //นำข้อมูลที่ดึงมา data ไปเก็บไว้ที่ state tasks ที่สร้างไว้
                     setTasks(data)
                 }
             }
 
-            //เรียกใช้ฟังก์ชันดึงข้อมูลให้ทำงาน
             fetchTasks()
         } catch (error) {
             alert("เกิดข้อผิดพลาดในการดึงข้อมูลงาน กรุณาลองใหม่อีกครั้ง!!!")
@@ -38,32 +31,24 @@ function ShowAllTask() {
         }
     }, [])
 
-    //สร้างฟังกช์นลบข้อมูลออกจาก task_tb และลบรูปออกจาก task_bk(ถ้ามี)
-  const handleDeleteClick = async (id, imageUrl) => {
-      //ถามยืนยันการลบข้อมูลก่อน
-      if( confirm('ต้องการลบข้อมูลใช่หรือไม่?') == true){
-          //ลบรูปออกจาก task_bk(ถ้ามี)
-          if(imageUrl != ''){
-              //ตัดเอาเฉพาะชื่อรูปจาก imageUrl
-              const imageName = imageUrl.split('/').pop()
-              //ได้ชื่อรูปมาแล้วก็ ไปลบออกจาก task_bk
-              await supabase.storage.from('BK_TASK').remove([imageName])
-          }
- 
-          //ลบข้อมูลออกจาก task_tb
-          const {data, error } = await supabase.from('TB_TASK').delete().eq('task_id', id)
- 
-          if(error){
-              alert("เกิดข้อผิดพลาดในการลบข้อมูลงาน กรุณาลองใหม่อีกครั้ง!!!")
-              return
-          }else{
-              alert("ลบข้อมูลงานเรียบร้อยแล้ว")
-              //ลบข้อมูลออกจาก state
-              setTasks(tasks.filter(task => task.id !== id))
-             //หรือใช้ window.location.reload()
-          }
+    const handleDeleteClick = async (id, imageUrl) => {
+        if (confirm('ต้องการลบข้อมูลใช่หรือไม่?') == true) {
+            if (imageUrl != '') {
+                const imageName = imageUrl.split('/').pop()
+                await supabase.storage.from('BK_TASK').remove([imageName])
+            }
+
+            const { data, error } = await supabase.from('TB_TASK').delete().eq('task_id', id)
+
+            if (error) {
+                alert("เกิดข้อผิดพลาดในการลบข้อมูลงาน กรุณาลองใหม่อีกครั้ง!!!")
+                return
+            } else {
+                alert("ลบข้อมูลงานเรียบร้อยแล้ว")
+                setTasks(tasks.filter(task => task.task_id !== id))
+            }
+        }
     }
-}
 
     return (
         <>
@@ -78,7 +63,6 @@ function ShowAllTask() {
                     -- ข้อมูลงานทั้งหมด --
                 </h1>
 
-                {/* ส่วนของปุ่มเปิดไปหน้า /addtask  */}
                 <div className="w-full flex justify-end mt-4 mb-7">
                     <Link to="/addtask" className="bg-blue-500 hover:bg-blue-600
                                            cursor-pointer p-3 text-white rounded">
@@ -86,7 +70,6 @@ function ShowAllTask() {
                     </Link>
                 </div>
 
-                {/* ส่วนของการแสดงข้อมูลงานทั้งหมดจาก Supabase */}
                 <div className="w-full">
                     <table className="w-full border border-gray-700 text-sm">
                         <thead className="bg-gray-200">
@@ -105,7 +88,6 @@ function ShowAllTask() {
                                 tasks.map((task) => (
                                     <tr key={task.task_id}>
                                         <td className="p-2 border border-gray-700">
-                                            {/* Ternary operator ____ ? ____ : _____ */}
                                             {
                                                 task.image_url === null || task.image_url === ''
                                                     ? <img className='w-20 mx-auto'
@@ -138,8 +120,8 @@ function ShowAllTask() {
                                             })}
                                         </td>
                                         <td className="p-2 border border-gray-700 text-center">
-                                            <Link to={'/updatetask/'+task.task_id} className='text-green-400 mr-2'>แก้ไข</Link>
-                                            <button onClick={()=>handleDeleteClick (task.task_id, task.task_img_url)} className='text-red-400 ml-2 cursor-pointer'> ลบ</button>
+                                            <Link to={'/updatetask/' + task.task_id} className='text-green-400 mr-2'>แก้ไข</Link>
+                                            <button onClick={() => handleDeleteClick(task.task_id, task.task_img_url)} className='text-red-400 ml-2 cursor-pointer'> ลบ</button>
                                         </td>
                                     </tr>
                                 ))
